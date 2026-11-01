@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Gourmet | Luxury Dining</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand font-serif" href="#home">Le Gourmet</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Our Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reservation">Reservations</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-gold btn-sm px-4 py-2" href="#reservation">Book Table</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section d-flex align-items-center text-center">
+        <div class="container">
+            <span class="sub-heading text-gold mb-3 d-block">A Culinary Masterpiece</span>
+            <h1 class="display-3 font-serif text-white mb-4">Exquisite Tastes & Timeless Elegance</h1>
+            <p class="lead text-light mb-5 mx-auto" style="max-width: 600px;">Experience fine dining crafted with passion, precision, and the finest seasonal ingredients sourced globally.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#menu" class="btn btn-gold px-4 py-3">Explore Menu</a>
+                <a href="#reservation" class="btn btn-outline-light px-4 py-3">Book a Table</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-5 bg-dark text-white">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <span class="text-gold text-uppercase tracking-widest">Gastronomy</span>
+                <h2 class="font-serif display-4 mt-2">The Seasonal Menu</h2>
+                <div class="gold-divider mx-auto mt-3"></div>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="d-flex justify-content-center flex-wrap gap-2 mb-5">
+                <button class="btn btn-outline-gold filter-btn active" data-filter="all">All Dishes</button>
+                <button class="btn btn-outline-gold filter-btn" data-filter="starter">Starters</button>
+                <button class="btn btn-outline-gold filter-btn" data-filter="main">Main Courses</button>
+                <button class="btn btn-outline-gold filter-btn" data-filter="dessert">Desserts</button>
+                <button class="btn btn-outline-gold filter-btn" data-filter="drink">Signature Drinks</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="row g-4" id="menu-grid">
+                <!-- Item 1 -->
+                <div class="col-lg-6 menu-item" data-category="starter">
+                    <div class="menu-card d-flex align-items-center p-3 rounded">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=300&q=80" alt="Truffle Scallops" class="rounded-circle menu-img me-4">
+                        <div class="flex-grow-1">
+                            <div class="d-flex justify-content-between align-items-baseline mb-1">
+                                <h5 class="font-serif mb-0 text-gold">Pan-Seared Scallops</h5>
+                                <span class="price font-serif">$28</span>
+                            </div>
+                            <p class="text-muted small mb-0">Served with truffle cauliflower purée, crispy pancetta, and herb oil.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="col-lg-6 menu-item" data-category="main">
+                    <div class="menu-card d-flex align-items-center p-3 rounded">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=300&q=80" alt="Wagyu Steak" class="rounded-circle menu-img me-4">
+                        <div class="flex-grow-1">
+                            <div class="d-flex justify-content-between align-items-baseline mb-1">
+                                <h5 class="font-serif mb-0 text-gold">A5 Wagyu Ribeye</h5>
+                                <span class="price font-serif">$95</span>
+                            </div>
+                            <p class="text-muted small mb-0">Japanese Miyazaki beef, roasted bone marrow, glazed baby root vegetables.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="col-lg-6 menu-item" data-category="main">
+                    <div class="menu-card d-flex align-items-center p-3 rounded">
+                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=300&q=80" alt="Lobster Thermidor" class="rounded-circle menu-img me-4">
+                        <div class="flex-grow-1">
+                            <div class="d-flex justify-content-between align-items-baseline mb-1">
+                                <h5 class="font-serif mb-0 text-gold">Maine Lobster Thermidor</h5>
+                                <span class="price font-serif">$68</span>
+                            </div>
+                            <p class="text-muted small mb-0">Fresh Atlantic lobster, gruyère cheese crust, cognac cream reduction.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="col-lg-6 menu-item" data-category="starter">
+                    <div class="menu-card d-flex align-items-center p-3 rounded">
+                        <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=300&q=80" alt="Foie Gras" class="rounded-circle menu-img me-4">
+                        <div class="flex-grow-1">
+                            <div class="d-flex justify-content-between align-items-baseline mb-1">
+                                <h5 class="font-serif mb-0 text-gold">Pan-Roasted Foie Gras</h5>
+                                <span class="price font-serif">$34</span>
+                            </div>
+                            <p class="text-muted small mb-0">With caramelized figs, toasted brioche, and aged port wine glaze.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="col-lg-6 menu-item" data-category="dessert">
+                    <div class="menu-card d-flex align-items-center p-3 rounded">
+                        <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=300&q=80" alt="Chocolate Souffle" class="rounded-circle menu-img me-4">
+                        <div class="flex-grow-1">
+                            <div class="d-flex justify-content-between align-items-baseline mb-1">
+                                <h5 class="font-serif mb-0 text-gold">Valrhona Chocolate Soufflé</h5>
+                                <span class="price font-serif">$22</span>
+                            </div>
+                            <p class="text-muted small mb-0">Warm liquid center, Madagascar vanilla bean artisanal gelato.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="col-lg-6 menu-item" data-category="drink">
+                    <div class="menu-card d-flex align-items-center p-3 rounded">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=300&q=80" alt="Golden Elixir Cocktail" class="rounded-circle menu-img me-4">
+                        <div class="flex-grow-1">
+                            <div class="d-flex justify-content-between align-items-baseline mb-1">
+                                <h5 class="font-serif mb-0 text-gold">The 24K Golden Elixir</h5>
+                                <span class="price font-serif">$30</span>
+                            </div>
+                            <p class="text-muted small mb-0">Vintage champagne, elderflower liqueur, edible 24-karat gold dust.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-black text-white">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior" class="img-fluid rounded shadow-lg">
+                        <div class="experience-badge bg-gold text-dark p-4 rounded text-center">
+                            <h3 class="font-serif mb-0 fw-bold">15+</h3>
+                            <small class="text-uppercase fw-semibold">Years of Excellence</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <span class="text-gold text-uppercase tracking-widest">Our Heritage</span>
+                    <h2 class="font-serif display-4 mt-2 mb-4">Where Passion Meets Gastronomy</h2>
+                    <p class="text-light mb-4">Founded in 2011, Le Gourmet has continually pushed the boundaries of modern culinary art. Led by Executive Chef Alexandre Laurent, our kitchen merges classical French techniques with innovative global flavors.</p>
+                    <p class="text-muted mb-4">Every ingredient tells a story—from sustainably caught seafood to organic herbs harvested fresh daily from our rooftop greenhouse.</p>
+                    <div class="row g-4 text-center text-lg-start">
+                        <div class="col-6">
+                            <h4 class="font-serif text-gold mb-1">Michelin Star</h4>
+                            <p class="small text-muted mb-0">Awarded for culinary distinction</p>
+                        </div>
+                        <div class="col-6">
+                            <h4 class="font-serif text-gold mb-1">Sommelier Choice</h4>
+                            <p class="small text-muted mb-0">Over 500 curated wine selections</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="py-5 bg-dark text-white">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <span class="text-gold text-uppercase tracking-widest">Table Booking</span>
+                    <h2 class="font-serif display-4 mt-2">Reserve Your Experience</h2>
+                    <div class="gold-divider mx-auto mt-3"></div>
+                    <p class="text-muted mt-3">Secure your table for an unforgettable dining experience.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="reservation-form p-4 p-md-5 rounded shadow-lg bg-black">
+                        <form id="bookingForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label text-gold">Full Name</label>
+                                    <input type="text" class="form-control bg-dark text-white border-secondary" placeholder="John Doe" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-gold">Email Address</label>
+                                    <input type="email" class="form-control bg-dark text-white border-secondary" placeholder="john@example.com" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-gold">Phone Number</label>
+                                    <input type="tel" class="form-control bg-dark text-white border-secondary" placeholder="+1 (555) 019-2834" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-gold">Number of Guests</label>
+                                    <select class="form-select bg-dark text-white border-secondary" required>
+                                        <option value="" selected disabled>Select guests</option>
+                                        <option value="1">1 Person</option>
+                                        <option value="2">2 Persons (Standard Table)</option>
+                                        <option value="4">4 Persons (Family Table)</option>
+                                        <option value="6">6+ Persons (VIP Private Booth)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-gold">Reservation Date</label>
+                                    <input type="date" class="form-control bg-dark text-white border-secondary" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-gold">Preferred Time</label>
+                                    <select class="form-select bg-dark text-white border-secondary" required>
+                                        <option value="" selected disabled>Select time slot</option>
+                                        <option value="17:00">5:00 PM</option>
+                                        <option value="18:30">6:30 PM</option>
+                                        <option value="20:00">8:00 PM</option>
+                                        <option value="21:30">9:30 PM</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label text-gold">Special Requests / Allergies</label>
+                                    <textarea class="form-control bg-dark text-white border-secondary" rows="3" placeholder="Mention any dietary requirements..."></textarea>
+                                </div>
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-gold px-5 py-3 w-100 fw-bold">Confirm Reservation</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="successAlert" class="alert alert-success mt-4 d-none text-center" role="alert">
+                            <i class="fas fa-check-circle me-2"></i> Table reserved successfully! We look forward to hosting you.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-5 border-top border-secondary">
+        <div class="container text-center">
+            <h3 class="font-serif text-gold mb-3">Le Gourmet</h3>
+            <p class="text-muted small mb-4">42 Grand Avenue, Culinary District, New York, NY 10012</p>
+            <div class="d-flex justify-content-center gap-4 mb-4">
+                <a href="#" class="text-gold fs-5"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gold fs-5"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gold fs-5"><i class="fab fa-tripadvisor"></i></a>
+            </div>
+            <p class="text-muted small mb-0">&copy; 2026 Le Gourmet Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
